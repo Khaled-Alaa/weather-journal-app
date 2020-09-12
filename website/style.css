@@ -9,7 +9,7 @@ body {
 #app {
   display: grid;
   grid-auto-rows: minmax(125px, auto);
-  background: rgba(226, 77, 77, 0.3);
+  background: rgba(74, 129, 52, 0.6);
   color: #f0d43a;
   justify-content: center;
   grid-gap: 1em;
