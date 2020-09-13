@@ -17,7 +17,7 @@ function performAction() {
   getWeather(baseURL, postCode, key).then(function (data) {
     postData("http://localhost:3000/addData", {
       temperature: Math.round(data.main.temp - 273.15) + "&#8451",
-      // to make the temperature in celsius and integer
+      // to make the temperature in celsius and the number be integer
       date: newDate,
       feelings: feelings,
       city: data.name + " City",
