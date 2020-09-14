@@ -1,12 +1,13 @@
 /* Global Variables */
 let baseURL = "https://api.openweathermap.org/data/2.5/weather?zip=";
 let key = "&appid=5d4580b67e0d7a721a96b71f0135bbb3";
+let apiUrl = "http://localhost:3000";
 
 // Create a new date instance dynamically with JS
-let d = new Date();
-let month = d.getMonth() + 1;
+let todayDate = new Date();
+let month = todayDate.getMonth() + 1;
 // because January month is = 0
-let newDate = month + "." + d.getDate() + "." + d.getFullYear();
+let newDate = month + "." + todayDate.getDate() + "." + todayDate.getFullYear();
 
 document.getElementById("generate").addEventListener("click", performAction);
 
@@ -15,7 +16,7 @@ function performAction() {
   const feelings = document.getElementById("feelings").value;
 
   getWeather(baseURL, postCode, key).then(function (data) {
-    postData("http://localhost:3000/addData", {
+    postData(`${apiUrl}/addData`, {
       temperature: Math.round(data.main.temp - 273.15) + "&#8451",
       // to make the temperature in celsius and the number be integer
       date: newDate,
@@ -58,7 +59,7 @@ const postData = async (url = "", data = {}) => {
 
 // Update UI
 const updateUI = async () => {
-  const request = await fetch("http://localhost:3000/all");
+  const request = await fetch(`${apiUrl}/all`);
   try {
     const allData = await request.json();
     document.getElementById("date").innerHTML = allData.date;
