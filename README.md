@@ -19,9 +19,13 @@ This project is an asynchronous web app that uses Web API and user data to dynam
 │   
 ├── .gitignore
 │
+├── package.json
+│
 ├── package-lock.json # npm package manager file. It's unlikely that you'll need to modify this.
 │
 ├── README.md - This file.
+│
+├── routes.js # A JavaScript file that inculde's routes.
 │
 └── server.js # A JavaScript API for the weather API.   
 ```
