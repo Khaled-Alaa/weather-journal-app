@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url("cloud-sky.jpg");
+  background-image: url("./../assets/cloud-sky.jpg");
   background-position: center;
   background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -22,30 +22,13 @@ body {
   width: 40rem;
 }
 
-.holder {
-}
-
 .entry {
   background: rgba(0, 0, 0, 0.5);
-}
-
-#entryHolder {
-}
-
-#date {
-}
-
-#temp {
-}
-
-#content {
 }
 
 .headline {
   font-size: 4rem;
   text-align: center;
-}
-.title {
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
